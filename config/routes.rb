@@ -1,8 +1,13 @@
 Aap2::Application.routes.draw do
-  get "static_pages/home"
-  get "static_pages/adopt"
-  get "static_pages/give"
-  get "static_pages/volunteer"
+  # get "static_pages/home"
+  match 'home', to: 'static_pages#home', via: 'get'
+  # get "static_pages/adopt"
+  match 'adopt', to: 'static_pages#adopt', via: 'get'
+  # get "static_pages/give"
+  match 'give', to: 'static_pages#give', via: 'get'
+  # get "static_pages/volunteer"
+  match 'volunteer', to: 'static_pages#volunteer', via: 'get'
+  
   resources :pets
 
   # The priority is based upon order of creation: first created -> highest priority.
